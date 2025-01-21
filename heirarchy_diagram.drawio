@@ -1,9 +1,42 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.6">
   <diagram name="Page-1" id="VDP-v6SipQ5RF9AnJXJO">
-    <mxGraphModel>
+    <mxGraphModel dx="1507" dy="1307" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-1" value="Main" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="-120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-2" value="CreateTargets" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-3" value="FillNumbers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-400" y="-40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-4" value="PlayGame" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="-40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-5" value="GetTarget" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-6" value="GetNumber" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-400" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-7" value="DisplayState" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-8" value="DisplayTargets" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-9" value="DisplayNumbers&lt;div&gt;Allowed&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-10" value="DisplayScore" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sYI8A0zLiOURxTtGvRJm-12" value="CheckIfUserInputValid" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
