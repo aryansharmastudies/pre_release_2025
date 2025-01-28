@@ -1,147 +1,155 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0" version="26.0.6">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
   <diagram name="Page-1" id="VDP-v6SipQ5RF9AnJXJO">
-    <mxGraphModel dx="2907" dy="3263" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4097" dy="3391" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-1" target="sYI8A0zLiOURxTtGvRJm-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-1" target="sYI8A0zLiOURxTtGvRJm-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-1" target="sYI8A0zLiOURxTtGvRJm-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-1" value="Main" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="800" y="-680" width="200" height="120" as="geometry" />
+          <mxGeometry x="800" y="-640" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-2" target="sYI8A0zLiOURxTtGvRJm-5">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-2" value="CreateTargets" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
           <mxGeometry x="120" y="-440" width="200" height="120" as="geometry" />
         </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-3" target="sYI8A0zLiOURxTtGvRJm-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-3" value="FillNumbers" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
           <mxGeometry x="400" y="-440" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="sYI8A0zLiOURxTtGvRJm-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="sYI8A0zLiOURxTtGvRJm-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="sYI8A0zLiOURxTtGvRJm-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="wHGBHEUg4wIxtBP_qHTT-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="wHGBHEUg4wIxtBP_qHTT-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="wHGBHEUg4wIxtBP_qHTT-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="wHGBHEUg4wIxtBP_qHTT-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="wHGBHEUg4wIxtBP_qHTT-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-4" target="wHGBHEUg4wIxtBP_qHTT-15">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-4" value="PlayGame" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
           <mxGeometry x="1320" y="-440" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-5" value="GetTarget" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#f8cecc;strokeColor=#b85450;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="120" y="-240" width="200" height="120" as="geometry" />
+          <mxGeometry x="120" y="-280" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-6" value="GetNumber" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="400" y="-240" width="200" height="120" as="geometry" />
+          <mxGeometry x="400" y="-280" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-7" target="sYI8A0zLiOURxTtGvRJm-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-7" target="sYI8A0zLiOURxTtGvRJm-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sYI8A0zLiOURxTtGvRJm-7" target="sYI8A0zLiOURxTtGvRJm-10">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-7" value="DisplayState" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="1000" y="-280" width="200" height="120" as="geometry" />
+          <mxGeometry x="960" y="-240" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-8" value="DisplayTargets" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="720" y="-80" width="200" height="120" as="geometry" />
+          <mxGeometry x="680" y="-40" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-9" value="DisplayNumbers&lt;div&gt;Allowed&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="1000" y="-80" width="200" height="120" as="geometry" />
+          <mxGeometry x="960" y="-40" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-10" value="DisplayScore" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="1280" y="-80" width="200" height="120" as="geometry" />
+          <mxGeometry x="1240" y="-40" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-12" value="CheckIfUser&lt;div&gt;InputValid&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="1560" y="-280" width="200" height="120" as="geometry" />
+          <mxGeometry x="1560" y="-240" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="sYI8A0zLiOURxTtGvRJm-13" value="EvaluateRPN" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
-          <mxGeometry x="1840" y="-280" width="200" height="120" as="geometry" />
+          <mxGeometry x="1840" y="-240" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-2" value="CheckNumbers&lt;div&gt;UsedAreAll&lt;/div&gt;&lt;div&gt;I&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;nNumbersAllowed&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="2120" y="-280" width="200" height="120" as="geometry" />
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wHGBHEUg4wIxtBP_qHTT-2" target="wHGBHEUg4wIxtBP_qHTT-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-4" value="CheckValidNumber" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-2" value="CheckNumbers&lt;div&gt;UsedAreAll&lt;/div&gt;&lt;div&gt;I&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;nNumbersAllowed&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="2120" y="-240" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-4" value="CheckValidNumber" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
           <mxGeometry x="2120" y="-80" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-6" value="CheckIfUser&lt;div&gt;InputEvaluation&lt;br&gt;IsATarget&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="2400" y="-280" width="200" height="120" as="geometry" />
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wHGBHEUg4wIxtBP_qHTT-6" target="wHGBHEUg4wIxtBP_qHTT-8">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-8" value="EvaluateRPN" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-6" value="CheckIfUser&lt;div&gt;InputEvaluation&lt;br&gt;IsATarget&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="2400" y="-240" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-8" value="EvaluateRPN" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
           <mxGeometry x="2400" y="-80" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-9" value="Remove&lt;div&gt;NumbersUsed&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="2830" y="-280" width="200" height="120" as="geometry" />
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wHGBHEUg4wIxtBP_qHTT-9" target="wHGBHEUg4wIxtBP_qHTT-10">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-10" value="ConvertToRPN" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="2680" y="-80" width="200" height="120" as="geometry" />
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wHGBHEUg4wIxtBP_qHTT-9" target="wHGBHEUg4wIxtBP_qHTT-12">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-11" value="GetNumber&lt;div&gt;FromUser&lt;/div&gt;&lt;div&gt;Input&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="2680" y="240" width="200" height="120" as="geometry" />
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-9" value="Remove&lt;div&gt;NumbersUsed&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="2820" y="-240" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-12" value="CheckValid&lt;div&gt;Number&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="2960" y="-80" width="200" height="120" as="geometry" />
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wHGBHEUg4wIxtBP_qHTT-10" target="wHGBHEUg4wIxtBP_qHTT-11">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-13" value="FillNumbers" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="3240" y="-280" width="200" height="120" as="geometry" />
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-10" value="ConvertToRPN" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="-40" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-14" value="GetNumber" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-11" value="GetNumber&lt;div&gt;FromUser&lt;/div&gt;&lt;div&gt;Input&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="120" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-12" value="CheckValid&lt;div&gt;Number&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="2960" y="-40" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wHGBHEUg4wIxtBP_qHTT-13" target="wHGBHEUg4wIxtBP_qHTT-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-13" value="FillNumbers" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="3240" y="-240" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-14" value="GetNumber" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
           <mxGeometry x="3240" y="-80" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-15" value="UpdateTargets" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="3520" y="-280" width="200" height="120" as="geometry" />
+        <mxCell id="C2EhszATPsO6lAKU5YwJ-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="wHGBHEUg4wIxtBP_qHTT-15" target="wHGBHEUg4wIxtBP_qHTT-16">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-16" value="GetTarget" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#f8cecc;strokeColor=#b85450;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-15" value="UpdateTargets" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="3520" y="-240" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-16" value="GetTarget" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#f8cecc;strokeColor=#b85450;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
           <mxGeometry x="3520" y="-80" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-17" value="DisplayScore" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" vertex="1" parent="1">
-          <mxGeometry x="3800" y="-280" width="200" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-18" value="def GetTarget(MaxTarget):&#xa;    return random.randint(1, MaxTarget)" style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="120" y="-120" width="240" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-19" value="def GetNumber(MaxNumber):&#xa;    return random.randint(1, MaxNumber)" style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="400" y="-120" width="250" height="50" as="geometry" />
-        </mxCell>
-        <UserObject label="def FillNumbers(NumbersAllowed, TrainingGame, MaxNumber):&#xa;    if TrainingGame:&#xa;        return [2, 3, 2, 8, 512]&#xa;    else:&#xa;        while len(NumbersAllowed) &lt; 5:&#xa;            NumbersAllowed.append(GetNumber(MaxNumber))      &#xa;        return NumbersAllowed" id="wHGBHEUg4wIxtBP_qHTT-20">
-          <mxCell style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-            <mxGeometry x="400" y="-320" width="370" height="120" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="def CreateTargets(SizeOfTargets, MaxTarget):&#xa;    Targets = []&#xa;    for Count in range(1, 6):&#xa;        Targets.append(-1)&#xa;    for Count in range(1, SizeOfTargets - 4):&#xa;        Targets.append(GetTarget(MaxTarget))&#xa;    return Targets" link="def CreateTargets(SizeOfTargets, MaxTarget):&#xa;    Targets = []&#xa;    for Count in range(1, 6):&#xa;        Targets.append(-1)&#xa;    for Count in range(1, SizeOfTargets - 4):&#xa;        Targets.append(GetTarget(MaxTarget))&#xa;    return Targets" id="wHGBHEUg4wIxtBP_qHTT-21">
-          <mxCell style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-            <mxGeometry x="120" y="-320" width="280" height="120" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-22" value="def DisplayTargets(Targets):&#xa;    print(&quot;|&quot;, end = &#39;&#39;)&#xa;    for T in Targets:&#xa;        if T == -1:&#xa;            print(&quot; &quot;, end = &#39;&#39;)&#xa;        else:&#xa;            print(T, end = &#39;&#39;)           &#xa;        print(&quot;|&quot;, end = &#39;&#39;)&#xa;    print()&#xa;    print()" style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="720" y="40" width="190" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-23" value="def DisplayNumbersAllowed(NumbersAllowed):&#xa;    print(&quot;Numbers available: &quot;, end = &#39;&#39;)&#xa;    for N in NumbersAllowed:&#xa;        print(str(N) + &quot;  &quot;, end = &#39;&#39;)&#xa;    print()&#xa;    print()" style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="40" width="290" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-24" value="def DisplayScore(Score):&#xa;    print(&quot;Current score: &quot; + str(Score))&#xa;    print()&#xa;    print()" style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="40" width="230" height="80" as="geometry" />
-        </mxCell>
-        <UserObject label="def CheckIfUserInputValid(UserInput):&#xa;    if re.search(&quot;^([0-9]+[\\+\\-\\*\\/])+[0-9]+$&quot;, UserInput) is not None:&#xa;        return True&#xa;    else:&#xa;        return False" id="wHGBHEUg4wIxtBP_qHTT-25">
-          <mxCell style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-            <mxGeometry x="1560" y="-160" width="200" height="50" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="def EvaluateRPN(UserInputInRPN):&#xa;    S = []&#xa;    while len(UserInputInRPN) &gt; 0:&#xa;        while UserInputInRPN[0] not in [&quot;+&quot;, &quot;-&quot;, &quot;*&quot;, &quot;/&quot;]:&#xa;            S.append(UserInputInRPN[0])&#xa;            UserInputInRPN.pop(0)        &#xa;        Num2 = float(S[-1])&#xa;        S.pop()&#xa;        Num1 = float(S[-1])&#xa;        S.pop()&#xa;        Result = 0.0&#xa;        if UserInputInRPN[0] == &quot;+&quot;:&#xa;            Result = Num1 + Num2&#xa;        elif UserInputInRPN[0] == &quot;-&quot;:&#xa;            Result = Num1 - Num2&#xa;        elif UserInputInRPN[0] == &quot;*&quot;:&#xa;            Result = Num1 * Num2&#xa;        elif UserInputInRPN[0] == &quot;/&quot;:&#xa;            Result = Num1 / Num2&#xa;        UserInputInRPN.pop(0)&#xa;        S.append(str(Result))       &#xa;    if float(S[0]) - math.floor(float(S[0])) == 0.0:&#xa;        return math.floor(float(S[0]))&#xa;    else:&#xa;        return -1" id="wHGBHEUg4wIxtBP_qHTT-26">
-          <mxCell style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-            <mxGeometry x="1840" y="-160" width="200" height="160" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-27" value="def DisplayState(Targets, NumbersAllowed, Score):&#xa;    DisplayTargets(Targets)&#xa;    DisplayNumbersAllowed(NumbersAllowed)&#xa;    DisplayScore(Score)" style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="-160" width="310" height="80" as="geometry" />
-        </mxCell>
-        <UserObject label="def EvaluateRPN(UserInputInRPN):&#xa;    S = []&#xa;    while len(UserInputInRPN) &gt; 0:&#xa;        while UserInputInRPN[0] not in [&quot;+&quot;, &quot;-&quot;, &quot;*&quot;, &quot;/&quot;]:&#xa;            S.append(UserInputInRPN[0])&#xa;            UserInputInRPN.pop(0)        &#xa;        Num2 = float(S[-1])&#xa;        S.pop()&#xa;        Num1 = float(S[-1])&#xa;        S.pop()&#xa;        Result = 0.0&#xa;        if UserInputInRPN[0] == &quot;+&quot;:&#xa;            Result = Num1 + Num2&#xa;        elif UserInputInRPN[0] == &quot;-&quot;:&#xa;            Result = Num1 - Num2&#xa;        elif UserInputInRPN[0] == &quot;*&quot;:&#xa;            Result = Num1 * Num2&#xa;        elif UserInputInRPN[0] == &quot;/&quot;:&#xa;            Result = Num1 / Num2&#xa;        UserInputInRPN.pop(0)&#xa;        S.append(str(Result))       &#xa;    if float(S[0]) - math.floor(float(S[0])) == 0.0:&#xa;        return math.floor(float(S[0]))&#xa;    else:&#xa;        return -1" id="wHGBHEUg4wIxtBP_qHTT-29">
-          <mxCell style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-            <mxGeometry x="2400" y="40" width="200" height="160" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="def ConvertToRPN(UserInput):&#xa;    Position = 0&#xa;    Precedence = {&quot;+&quot;: 2, &quot;-&quot;: 2, &quot;*&quot;: 4, &quot;/&quot;: 4}&#xa;    Operators = []&#xa;    Operand, Position = GetNumberFromUserInput(UserInput, Position)&#xa;    UserInputInRPN = []&#xa;    UserInputInRPN.append(str(Operand))&#xa;    Operators.append(UserInput[Position - 1])&#xa;    while Position &lt; len(UserInput):&#xa;        Operand, Position = GetNumberFromUserInput(UserInput, Position)&#xa;        UserInputInRPN.append(str(Operand))&#xa;        if Position &lt; len(UserInput):&#xa;            CurrentOperator = UserInput[Position - 1]&#xa;            while len(Operators) &gt; 0 and Precedence[Operators[-1]] &gt; Precedence[CurrentOperator]:&#xa;                UserInputInRPN.append(Operators[-1])&#xa;                Operators.pop()                &#xa;            if len(Operators) &gt; 0 and Precedence[Operators[-1]] == Precedence[CurrentOperator]:&#xa;                UserInputInRPN.append(Operators[-1])&#xa;                Operators.pop()    &#xa;            Operators.append(CurrentOperator)&#xa;        else:&#xa;            while len(Operators) &gt; 0:&#xa;                UserInputInRPN.append(Operators[-1])&#xa;                Operators.pop()&#xa;    return UserInputInRPN" id="wHGBHEUg4wIxtBP_qHTT-30">
-          <mxCell style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-            <mxGeometry x="2680" y="40" width="210" height="170" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="def CheckValidNumber(Item, MaxNumber):&#xa;    if re.search(&quot;^[0-9]+$&quot;, Item) is not None:&#xa;        ItemAsInteger = int(Item)&#xa;        if ItemAsInteger &gt; 0 and ItemAsInteger &lt;= MaxNumber:&#xa;            return True            &#xa;    return False" id="wHGBHEUg4wIxtBP_qHTT-31">
-          <mxCell style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-            <mxGeometry x="2960" y="40" width="200" height="50" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <UserObject label="def GetNumberFromUserInput(UserInput, Position):&#xa;    Number = &quot;&quot;&#xa;    MoreDigits = True&#xa;    while MoreDigits:&#xa;        if not(re.search(&quot;[0-9]&quot;, str(UserInput[Position])) is None):&#xa;            Number += UserInput[Position]&#xa;        else:&#xa;            MoreDigits = False            &#xa;        Position += 1&#xa;        if Position == len(UserInput):&#xa;            MoreDigits = False&#xa;    if Number == &quot;&quot;:&#xa;        return -1, Position&#xa;    else:&#xa;        return int(Number), Position" id="wHGBHEUg4wIxtBP_qHTT-32">
-          <mxCell style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-            <mxGeometry x="2680" y="360" width="200" height="110" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-33" value="def Main():&#xa;    NumbersAllowed = []&#xa;    Targets = []&#xa;    MaxNumberOfTargets = 20&#xa;    MaxTarget = 0&#xa;    MaxNumber = 0&#xa;    TrainingGame = False&#xa;    Choice = input(&quot;Enter y to play the training game, anything else to play a random game: &quot;).lower()&#xa;    print()&#xa;    if Choice == &quot;y&quot;:&#xa;        MaxNumber = 1000&#xa;        MaxTarget = 1000&#xa;        TrainingGame = True&#xa;        Targets = [-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 23, 119]&#xa;    else:&#xa;        MaxNumber = 10&#xa;        MaxTarget = 50&#xa;        Targets = CreateTargets(MaxNumberOfTargets, MaxTarget)        &#xa;    NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber)&#xa;    PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber)&#xa;    input()" style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="800" y="-560" width="230" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="wHGBHEUg4wIxtBP_qHTT-34" value="def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):&#xa;    Score = 0&#xa;    GameOver = False&#xa;    while not GameOver:&#xa;        DisplayState(Targets, NumbersAllowed, Score)&#xa;        UserInput = input(&quot;Enter an expression: &quot;)&#xa;        print()&#xa;        if CheckIfUserInputValid(UserInput):&#xa;            UserInputInRPN = ConvertToRPN(UserInput)&#xa;            if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):&#xa;                IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)&#xa;                if IsTarget:&#xa;                    NumbersAllowed = RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed)&#xa;                    NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber)&#xa;        Score -= 1&#xa;        if Targets[0] != -1:&#xa;            GameOver = True&#xa;        else:&#xa;            Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)        &#xa;    print(&quot;Game over!&quot;)&#xa;    DisplayScore(Score)" style="text;whiteSpace=wrap;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="1320" y="-320" width="240" height="140" as="geometry" />
+        <mxCell id="wHGBHEUg4wIxtBP_qHTT-17" value="DisplayScore" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fixedWidth=0;resizable=1;resizeWidth=0;resizeHeight=0;imageWidth=25;imageHeight=25;" parent="1" vertex="1">
+          <mxGeometry x="3800" y="-240" width="200" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
