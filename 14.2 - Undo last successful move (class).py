@@ -1,11 +1,25 @@
-#Skeleton Program code for the AQA A Level Paper 1 Summer 2025 examination
-#this code should be used in conjunction with the Preliminary Material
-#written by the AQA Programmer Team
-#developed in the Python 3.9 programming environment
-
+# Enter a successful move, then have an option to undo it.
+# Create a class called UndoState that stores a copy of NumbersAllowed, Targets and Score. 
+# Create suitable encapsulation methods to access these properties.
 import re
 import random
 import math
+
+class undostate():
+    def __init__(self, NumbersAllowed, Targets, Score):
+        self.NumbersAllowed = NumbersAllowed
+        self.Targets = Targets
+        self.Score = Score
+    
+    def updateNumbersAllowed(self, NumbersAllowed):
+        self.NumbersAllowed = NumbersAllowed
+    def updateScore(self, Score):
+        self.Score = Score
+    def updateTargets(self, Targets):
+        self.Targets = Targets
+
+    def undo(self):
+        return self.NumbersAllowed, self.Targets, self.Score
 
 def Main():
     NumbersAllowed = []
@@ -29,25 +43,38 @@ def Main():
     PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber)
     input()
     
+
+  # score , numbersr allowed, target  
 def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     Score = 0
     GameOver = False
+    undo = undostate(NumbersAllowed, Targets, Score)
     while not GameOver:
         DisplayState(Targets, NumbersAllowed, Score)
         UserInput = input("Enter an expression: ")
-        print()
-        if CheckIfUserInputValid(UserInput):
+        if UserInput == "u":
+            NumbersAllowed, Targets, Score = undo.undo()
+            Score += 1
+
+        elif CheckIfUserInputValid(UserInput):
+            undo.updateScore(Score)
+            undo.updateNumbersAllowed(NumbersAllowed)
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
                 IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)
+                
                 if IsTarget:
                     NumbersAllowed = RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed)
                     NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber)
+                    
+
         Score -= 1
         if Targets[0] != -1:
             GameOver = True
-        else:
-            Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)        
+        elif UserInput != "u":
+            Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)    
+            undo.updateTargets(Targets)
+            
     print("Game over!")
     DisplayScore(Score)
 
@@ -131,7 +158,7 @@ def ConvertToRPN(UserInput):
     Position = 0
     Precedence = {"+": 2, "-": 2, "*": 4, "/": 4}
     Operators = []
-    Operand, Position =  (UserInput, Position)
+    Operand, Position = GetNumberFromUserInput(UserInput, Position)
     UserInputInRPN = []
     UserInputInRPN.append(str(Operand))
     Operators.append(UserInput[Position - 1])
