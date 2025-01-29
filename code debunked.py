@@ -81,9 +81,17 @@ def UpdateTargets(Targets, TrainingGame, MaxTarget):
     return Targets
 
 def CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
+    # NumbersAllowed is a list of integers that are available to the user !
+    # UserInputInRPN is a list of strings that are the numbers and operators entered by the user !! e.g. ['2', '3', '+']
+    # MaxNumber is the maximum number that user can use
     Temp = []
     for Item in NumbersAllowed:
-        Temp.append(Item)
+        Temp.append(Item) 
+        # the whole point of doing this is to make a copy of the list
+        # natively, python lists are mutable, so if you do Temp = NumbersAllowed, Temp will be a reference to NumbersAllowed
+        # more importantly, lists are global variables, so if you remove an item from Temp, it will also be removed from NumbersAllowed !!!
+        # so if you remove an item from Temp, it will also be removed from NumbersAllowed !!!
+    
     for Item in UserInputInRPN:
         if CheckValidNumber(Item, MaxNumber):
             if int(Item) in Temp:
