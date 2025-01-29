@@ -75,7 +75,10 @@ def UpdateTargets(Targets, TrainingGame, MaxTarget):
         Targets[Count] = Targets[Count + 1]
     Targets.pop()
     if TrainingGame:
-        Targets.append(Targets[-1])
+        Targets.append(Targets[-1]) # strangely, in TrainingGame, the last target is repeatedly appended to the end of the list i.e.
+        # | | | | | |23|9|140|82|121|34|45|68|75|34|23|119|43|23|119|
+        # | | | | |23|9|140|82|121|34|45|68|75|34|23|119|43|23|119|119|
+        # | | | |23|9|140|82|121|34|45|68|75|34|23|119|43|23|119|119|119|
     else:
         Targets.append(GetTarget(MaxTarget))
     return Targets

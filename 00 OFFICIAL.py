@@ -131,7 +131,7 @@ def ConvertToRPN(UserInput):
     Position = 0
     Precedence = {"+": 2, "-": 2, "*": 4, "/": 4}
     Operators = []
-    Operand, Position =  (UserInput, Position)
+    Operand, Position = GetNumberFromUserInput(UserInput, Position)
     UserInputInRPN = []
     UserInputInRPN.append(str(Operand))
     Operators.append(UserInput[Position - 1])

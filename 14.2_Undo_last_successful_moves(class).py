@@ -1,27 +1,17 @@
-# Enter a successful move, then have an option to undo it.
-# Create a class called UndoState that stores a copy of NumbersAllowed, Targets and Score. 
-# Create suitable encapsulation methods to access these properties.
+#Skeleton Program code for the AQA A Level Paper 1 Summer 2025 examination
+#this code should be used in conjunction with the Preliminary Material
+#written by the AQA Programmer Team
+#developed in the Python 3.9 programming environment
+
 import re
 import random
 import math
 
-undolist = []
-
-class undostate():
+class Undo():
     def __init__(self, NumbersAllowed, Targets, Score):
-        self.NumbersAllowed = NumbersAllowed[:]
-        self.Targets = Targets[:]
+        self.NumbersAllowed = list(NumbersAllowed)
+        self.Targets = list(Targets)
         self.Score = Score
-
-    def display(self):
-        print("##########")
-        print("NumbersAllowed: ", self.NumbersAllowed)
-        print("Targets: ", self.Targets)
-        print("Score: ", self.Score)
-        print("##########")
-
-    def undo(self):
-        return self.NumbersAllowed, self.Targets, self.Score
 
 def Main():
     NumbersAllowed = []
@@ -45,44 +35,50 @@ def Main():
     PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber)
     input()
     
-
-  # score , numbersr allowed, target  
 def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     Score = 0
     GameOver = False
-    undolist.append(undostate(NumbersAllowed, Targets, Score))
+    
     while not GameOver:
         DisplayState(Targets, NumbersAllowed, Score)
-        UserInput = input("Enter an expression: ")
+        undolist.append(Undo(NumbersAllowed, Targets, Score))
+        print("undolist: ", undolist)
+        UserInput = input("Enter an expression or \'u\' to undo: ")
+        print()
         if UserInput == "u":
-            NumbersAllowed, Targets, Score = undolist[-1].undo()
-            undolist.pop()
-
+            if len(undolist) == 1:
+                NumbersAllowed = undolist[0].NumbersAllowed
+                Targets = undolist[0].Targets
+                Score = undolist[0].Score
+                undolist.pop()
+            else:
+                NumbersAllowed = undolist[-2].NumbersAllowed
+                Targets = undolist[-2].Targets
+                Score = undolist[-2].Score
+                undolist.pop(), undolist.pop()
         elif CheckIfUserInputValid(UserInput):
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
-                IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score, NumbersAllowed)
+                IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)
                 if IsTarget:
                     NumbersAllowed = RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed)
                     NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber)
-        Score -= 1
+        
+        if UserInput != "u":
+            Score -= 1
         if Targets[0] != -1:
             GameOver = True
         elif UserInput != "u":
-            Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)    
-            
+            Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)        
     print("Game over!")
     DisplayScore(Score)
 
-def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score, NumbersAllowed):
+def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score):
     UserInputEvaluation = EvaluateRPN(UserInputInRPN)
     UserInputEvaluationIsATarget = False
     if UserInputEvaluation != -1:
         for Count in range(0, len(Targets)):
             if Targets[Count] == UserInputEvaluation:
-                undolist.append(undostate(NumbersAllowed, Targets, Score))
-                undolist[-1].display()
-                print(Score)
                 Score += 2
                 Targets[Count] = -1
                 UserInputEvaluationIsATarget = True        
@@ -250,4 +246,5 @@ def FillNumbers(NumbersAllowed, TrainingGame, MaxNumber):
         return NumbersAllowed
 
 if __name__ == "__main__":
+    undolist = list()
     Main()
