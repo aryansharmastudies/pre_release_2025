@@ -5,18 +5,20 @@ import re
 import random
 import math
 
+undolist = []
+
 class undostate():
     def __init__(self, NumbersAllowed, Targets, Score):
-        self.NumbersAllowed = NumbersAllowed
-        self.Targets = Targets
+        self.NumbersAllowed = NumbersAllowed[:]
+        self.Targets = Targets[:]
         self.Score = Score
-    
-    def updateNumbersAllowed(self, NumbersAllowed):
-        self.NumbersAllowed = NumbersAllowed
-    def updateScore(self, Score):
-        self.Score = Score
-    def updateTargets(self, Targets):
-        self.Targets = Targets
+
+    def display(self):
+        print("##########")
+        print("NumbersAllowed: ", self.NumbersAllowed)
+        print("Targets: ", self.Targets)
+        print("Score: ", self.Score)
+        print("##########")
 
     def undo(self):
         return self.NumbersAllowed, self.Targets, self.Score
@@ -48,42 +50,39 @@ def Main():
 def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     Score = 0
     GameOver = False
-    undo = undostate(NumbersAllowed, Targets, Score)
+    undolist.append(undostate(NumbersAllowed, Targets, Score))
     while not GameOver:
         DisplayState(Targets, NumbersAllowed, Score)
         UserInput = input("Enter an expression: ")
         if UserInput == "u":
-            NumbersAllowed, Targets, Score = undo.undo()
-            Score += 1
+            NumbersAllowed, Targets, Score = undolist[-1].undo()
+            undolist.pop()
 
         elif CheckIfUserInputValid(UserInput):
-            undo.updateScore(Score)
-            undo.updateNumbersAllowed(NumbersAllowed)
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
-                IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)
-                
+                IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score, NumbersAllowed)
                 if IsTarget:
                     NumbersAllowed = RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed)
                     NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber)
-                    
-
         Score -= 1
         if Targets[0] != -1:
             GameOver = True
         elif UserInput != "u":
             Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)    
-            undo.updateTargets(Targets)
             
     print("Game over!")
     DisplayScore(Score)
 
-def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score):
+def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score, NumbersAllowed):
     UserInputEvaluation = EvaluateRPN(UserInputInRPN)
     UserInputEvaluationIsATarget = False
     if UserInputEvaluation != -1:
         for Count in range(0, len(Targets)):
             if Targets[Count] == UserInputEvaluation:
+                undolist.append(undostate(NumbersAllowed, Targets, Score))
+                undolist[-1].display()
+                print(Score)
                 Score += 2
                 Targets[Count] = -1
                 UserInputEvaluationIsATarget = True        
