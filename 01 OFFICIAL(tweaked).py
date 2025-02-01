@@ -1,12 +1,7 @@
-"""
-Introduce a bonus to a number from the targets, each round randomly.
-
-if the targets are: | | | | | |48|19|16|37|49|48|48|17|40|8|17|18|13|22|33| and your code randomly selects 48, then it would show this:
-
-| | | | | |48|19|16|37|49|48|48|17|40|8|17|18|13|22|33|
-            ^              ^  ^
-If you make that number, your score would be doubled. In this instance, they would get 3 for making the value, so 6 in total.
-"""
+#Skeleton Program code for the AQA A Level Paper 1 Summer 2025 examination
+#this code should be used in conjunction with the Preliminary Material
+#written by the AQA Programmer Team
+#developed in the Python 3.9 programming environment
 
 import re
 import random
@@ -25,7 +20,7 @@ def Main():
         MaxNumber = 1000
         MaxTarget = 1000
         TrainingGame = True
-        Targets = [-1, -1, -1, -1, -1, 16, 16, 16, 16, 16, 16, 16, 68, 75, 34, 9, 16, 43, 16, 119]
+        Targets = [-1, -1, -1, -1, -1, 16, 9, 140, 82, 121, 34, 45, 68, 75, 34, 16, 119, 43, 16, 119]
     else:
         MaxNumber = 10
         MaxTarget = 50
@@ -38,20 +33,16 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     Score = 0
     GameOver = False
     while not GameOver:
-        bonus_target = random.choice(Targets)
-        while bonus_target == -1:
-            bonus_target = random.choice(Targets) # picks random bonus target
-        DisplayState(Targets, NumbersAllowed, Score, bonus_target)
+        DisplayState(Targets, NumbersAllowed, Score)
         UserInput = input("Enter an expression: ")
         print()
         if CheckIfUserInputValid(UserInput):
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
-                IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score, bonus_target)
+                IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)
                 if IsTarget:
                     NumbersAllowed = RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed)
                     NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber)
-        
         Score -= 1
         if Targets[0] != -1:
             GameOver = True
@@ -60,17 +51,10 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     print("Game over!")
     DisplayScore(Score)
 
-def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score, bonus_target):
+def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score):
     UserInputEvaluation = EvaluateRPN(UserInputInRPN)
-    bonus = UserInputEvaluation == bonus_target
     UserInputEvaluationIsATarget = False
-    if bonus:
-        Score += 3 + 2 * (Targets.count(bonus_target) - 1)
-        for Count in range(0, len(Targets)):
-            if Targets[Count] == bonus_target:
-                Targets[Count] = -1
-                UserInputEvaluationIsATarget = True
-    elif UserInputEvaluation != -1:
+    if UserInputEvaluation != -1:
         for Count in range(0, len(Targets)):
             if Targets[Count] == UserInputEvaluation:
                 Score += 2
@@ -115,8 +99,8 @@ def CheckValidNumber(Item, MaxNumber):
             return True            
     return False
     
-def DisplayState(Targets, NumbersAllowed, Score, bonus_target):
-    DisplayTargets(Targets, bonus_target)
+def DisplayState(Targets, NumbersAllowed, Score):
+    DisplayTargets(Targets)
     DisplayNumbersAllowed(NumbersAllowed)
     DisplayScore(Score)    
 
@@ -132,21 +116,14 @@ def DisplayNumbersAllowed(NumbersAllowed):
     print()
     print()
     
-def DisplayTargets(Targets, bonus_target):
-    print("bonus target is: " + str(bonus_target))
+def DisplayTargets(Targets):
     print("|", end = '')
     for T in Targets:
         if T == -1:
-            print("   ", end = '')
+            print(" ", end = '')
         else:
-            print(str(T).center(3), end = '')           
+            print(T, end = '')           
         print("|", end = '')
-    print()
-    for target in Targets:
-        if target != bonus_target:
-            print("    ", end = '')
-        else:
-            print(" ^^^", end = '')
     print()
     print()
 
