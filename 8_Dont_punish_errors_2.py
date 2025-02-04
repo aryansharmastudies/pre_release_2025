@@ -36,7 +36,8 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
         DisplayState(Targets, NumbersAllowed, Score)
         UserInput = input("Enter an expression: ")
         print()
-        if CheckIfUserInputValid(UserInput)[0]:
+        UserInputValid, UserInput = CheckIfUserInputValid(UserInput)
+        if UserInputValid:
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
                 IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)
@@ -196,10 +197,11 @@ def GetNumberFromUserInput(UserInput, Position):
         return int(Number), Position    
 
 def CheckIfUserInputValid(UserInput):
-    if re.search("^([0-9]+[\\+\\-\\*\\/])+[0-9]+$", UserInput) is not None:
-        return True
-    else:
-        return False
+    while True:
+        if re.search("^([0-9]+[\\+\\-\\*\\/])+[0-9]+$", UserInput) is not None:
+            return True, UserInput
+        else:
+            UserInput = input('invalid formula, please retry: ')
 
 def GetTarget(MaxTarget):
     return random.randint(1, MaxTarget)
