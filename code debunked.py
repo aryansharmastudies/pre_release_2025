@@ -195,7 +195,7 @@ def EvaluateRPN(UserInputInRPN):
             print(f"Result {Result} i.e. {Num1} / {Num2}")
         UserInputInRPN.pop(0)
         S.append(str(Result))       
-    if float(S[0]) - math.floor(float(S[0])) == 0.0:
+    if float(S[0]) - math.floor(float(S[0])) == 0.0: # basically just used to check if the evaluation of RPN is an integer.
         return math.floor(float(S[0]))
     else:
         return -1
