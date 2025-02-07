@@ -1,5 +1,8 @@
-'''##9.1 - Change the scoring (sum of input)
-The number of numbers used in the expression is the score to be added e.g. `3+5*2` would add 3 to the score.'''
+#Skeleton Program code for the AQA A Level Paper 1 Summer 2025 examination
+#this code should be used in conjunction with the Preliminary Material
+#written by the AQA Programmer Team
+#developed in the Python 3.9 programming environment
+
 import re
 import random
 import math
@@ -17,7 +20,7 @@ def Main():
         MaxNumber = 1000
         MaxTarget = 1000
         TrainingGame = True
-        Targets = [-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 23, 119]
+        Targets = [-1, -1, -1, -1, -1, 23, 9, 9, 9, 9, 34, 45, 68, 75, 34, 23, 119, 43, 23, 119]
     else:
         MaxNumber = 10
         MaxTarget = 50
@@ -38,7 +41,6 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
                 IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)
                 if IsTarget:
-                    Score += sigma(UserInput)
                     NumbersAllowed = RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed)
                     NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber)
         Score -= 1
@@ -49,23 +51,21 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     print("Game over!")
     DisplayScore(Score)
 
-def sigma(UserInput):
-    score = 0
-    usrinputinrpn = ConvertToRPN(UserInput)
-    for char in usrinputinrpn:
-        if char.isdigit():
-            score += 1
-    return score
-
-
 def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score):
+    Digit = [num for num in UserInputInRPN if num.isdigit()]
     UserInputEvaluation = EvaluateRPN(UserInputInRPN)
+    print(Digit)
     UserInputEvaluationIsATarget = False
     if UserInputEvaluation != -1:
         for Count in range(0, len(Targets)):
             if Targets[Count] == UserInputEvaluation:
                 Targets[Count] = -1
-                UserInputEvaluationIsATarget = True      
+                UserInputEvaluationIsATarget = True        
+                Score += len(Digit)
+                # okay so for each iteration, if the Target is killed
+                # Score += len(Digit) # this is just the bonus you get for getting multiple targets each round
+    Score += 1 # to deal with the -1 in PlayGame
+    
     return UserInputEvaluationIsATarget, Score
     
 def RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed):
