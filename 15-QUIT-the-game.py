@@ -1,5 +1,7 @@
-'''13 - Negative numbers
-Allow the game to select negative numbers to the same range as the positive numbers for users e.g. -10 to +10 or -512 to +512.'''
+#Skeleton Program code for the AQA A Level Paper 1 Summer 2025 examination
+#this code should be used in conjunction with the Preliminary Material
+#written by the AQA Programmer Team
+#developed in the Python 3.9 programming environment
 
 import re
 import random
@@ -32,7 +34,7 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     GameOver = False
     while not GameOver:
         DisplayState(Targets, NumbersAllowed, Score)
-        UserInput = input("Enter an expression: ")
+        UserInput = input("Enter an expression, enter q to quit: ")
         print()
         if CheckIfUserInputValid(UserInput):
             UserInputInRPN = ConvertToRPN(UserInput)
@@ -42,7 +44,7 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
                     NumbersAllowed = RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed)
                     NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber)
         Score -= 1
-        if Targets[0] != -1:
+        if Targets[0] != -1 or UserInput == 'q':
             GameOver = True
         else:
             Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)        

@@ -1,6 +1,9 @@
-'''13 - Negative numbers
-Allow the game to select negative numbers to the same range as the positive numbers for users e.g. -10 to +10 or -512 to +512.'''
-
+'''
+#16 - Move the targets back
+Give the user the option to move the targets back to the right by `n` 
+with each movement occuring at a cost of `-2` points 
+i.e. moving 3 back to the right would be -6
+'''
 import re
 import random
 import math
@@ -32,9 +35,11 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     GameOver = False
     while not GameOver:
         DisplayState(Targets, NumbersAllowed, Score)
-        UserInput = input("Enter an expression: ")
+        UserInput = input("Enter an expression or enter n bruh: ")
         print()
-        if CheckIfUserInputValid(UserInput):
+        if UserInput == 'n':
+            Targets, Score = MoveBack(Targets, Score)
+        elif CheckIfUserInputValid(UserInput):
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
                 IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)
@@ -48,6 +53,42 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
             Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)        
     print("Game over!")
     DisplayScore(Score)
+
+def MoveBack(Targets, Score):
+    
+    x = int(input('how many times you wanna shift? : '))
+    ShiftTarget(Targets, x)
+    Score -= 2*x
+    Score += 1
+    return Targets, Score
+    
+def ShiftTarget(Targets, x):
+    l = len(Targets)
+    print(f'{Targets}')
+    for i in range(l-x-1, 0, -1):
+        Targets[i+x] = Targets[i]
+        print(f'{Targets}')
+    
+    # -1, -1, -1, 3, 5, 7, 9
+
+    '''
+    how many times you wanna shift? : 10
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 23, 119]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 23, 121]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 82, 121]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 140, 82, 121]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 9, 140, 82, 121]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 9, 140, 82, 121]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, -1, 23, 9, 140, 82, 121]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, -1, -1, 23, 9, 140, 82, 121]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, -1, -1, -1, 23, 9, 140, 82, 121]
+[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, -1, -1, -1, -1, 23, 9, 140, 82, 121]
+| | | | |23|9|140|82|121|34| | | | |23|9|140|82|121|121|
+    
+    '''
+    
+
+    # TODO or just uhhhhhh chop of the tail(the last element) and uhhhh add in the beginnign '-1'
 
 def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score):
     UserInputEvaluation = EvaluateRPN(UserInputInRPN)

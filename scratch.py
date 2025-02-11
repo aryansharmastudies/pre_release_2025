@@ -1,3 +1,2 @@
-x = '5*2+3'
-result = eval(x)
-print(result)
+for x in range(4, 0, -1):
+    print(x)
