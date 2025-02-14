@@ -1,0 +1,19 @@
+paper 1:
+revise: queues, sets, regex, graphs and trees(traverse graphs and trees)!
+section b: code a math function (20 min)
+section c: about code - like which function returns boolean
+how wuld u change function to do this
+section d: 
+
+coding env without dark mode Ctrl-K-Ctrl-T
+set clocks
+REMEMBER TO PUT NAME AT THE FRONT AND BOTTOM... -_-
+
+paper 2:
+298/375
+course work - 75
+exam - 300
+
+dead-line for course work -> end of half work.
+9 weeks left
+2 weeks mocks

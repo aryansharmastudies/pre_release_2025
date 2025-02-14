@@ -1,13 +1,16 @@
 '''
-#16 - Move the targets back
-Give the user the option to move the targets back to the right by `n` 
-with each movement occuring at a cost of `-2` points 
-i.e. moving 3 back to the right would be -6
-'''
-import re
-import random
-import math
+Allow the ability to freeze and unfreeze one target at time.
+A frozen target appears with triangular brackets around it e.g. <23>.
+When frozen that target will not move along until it is unfrozen.
+Before each turn, the user is asked which index they wish to freeze or unfreeze
+and can only select an index where the value stored there is greater than -1.
 
+For example: starting with: | | | |23|9|140|<82>|121|34|45
+
+entering 8+3-2
+
+becomes: | | |23| |140|121|<82>|34|45
+'''
 def Main():
     NumbersAllowed = []
     Targets = []
@@ -35,11 +38,14 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     GameOver = False
     while not GameOver:
         DisplayState(Targets, NumbersAllowed, Score)
-        UserInput = input("Enter an expression or enter n bruh: ")
+        UserInput = input("Enter an expression or \'f\' for freeze: ")
         print()
-        if UserInput == 'n':
-            Targets, Score = MoveBack(Targets, Score)
-        elif CheckIfUserInputValid(UserInput):
+        if UserInput == 'f':
+            freeze_number = int(input('enter number to freeze: '))
+            while freeze_number not in Targets:
+                freeze_number = int(input('enter number to freeze: '))
+                freeze(freeze_number)
+        if CheckIfUserInputValid(UserInput):
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
                 IsTarget, Score = CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score)
@@ -54,73 +60,8 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     print("Game over!")
     DisplayScore(Score)
 
-def MoveBack(Targets, Score): #🐸
-    shift = int(input('how many times you wanna shift? : '))
-    ShiftTarget(Targets, shift)
-    Score -= 2*shift
-    Score += 1
-    return Targets, Score
-    
-def ShiftTarget(Targets, shift): #🐸
-    length = len(Targets)
-    print(f'length: {length}')
-    print(f'we are working with: {Targets}')
-    first_target_index = 0
-    count = 0
-    while count != length and first_target_index == 0:
-        # print(Targets[count])
-        if Targets[count] != -1:
-            first_target_index = count
-        
-        count += 1
-        # print(f'{count}, {first_target_index}')
-    print(f'first element of list index: {first_target_index}')
-        
-    for i in range(length - shift -1, 0, -1):
-        Targets[i + shift] = Targets[i]
-        print(f'{Targets}')
-
-    print(f'filling up the Targets list back up with -1!:')
-
-    for index in range(0, first_target_index + shift):
-        Targets[index] = -1
-        print(f'{Targets}')
-
-'''
-
-🐸 THIS EXAMPLE SHOWS HOW THIS ALGORITHM WILL WORK 🐸
-
-how many times you wanna shift? : 2
-length: 20
-we are working with: [-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 23, 119]
-first element of list index: 5
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 23, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 82, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 140, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, 9, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, 23, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-filling up the Targets list back up with -1!:
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-[-1, -1, -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43]
-| | | | | | |23|9|140|82|121|34|45|68|75|34|23|119|43|43|
-'''
+def freeze(freeze_number):
+    pass
 
 def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score):
     UserInputEvaluation = EvaluateRPN(UserInputInRPN)

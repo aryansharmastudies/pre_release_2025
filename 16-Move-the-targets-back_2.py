@@ -39,14 +39,16 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
         print('Press \'n\' to enter shift mode')
         UserInput = input("Enter an expression: ")
         if UserInput == 'n':
-            shift = int(input('Enter number of shifts'))
+            shift = int(input('Enter number of shifts: '))
             head = list()
             length = len(Targets)
             for x in range(0, shift):
                 head.append(-1)
             Targets = head + Targets[:length - shift - 1]
 
-        #TODO add scoring -2 each time
+            Score -= shift * 2
+            Score += 1
+
         if CheckIfUserInputValid(UserInput):
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
