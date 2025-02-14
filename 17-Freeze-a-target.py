@@ -11,6 +11,11 @@ entering 8+3-2
 
 becomes: | | |23| |140|121|<82>|34|45
 '''
+
+import re
+import random
+import math
+
 def Main():
     NumbersAllowed = []
     Targets = []
@@ -38,13 +43,17 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
     GameOver = False
     while not GameOver:
         DisplayState(Targets, NumbersAllowed, Score)
-        UserInput = input("Enter an expression or \'f\' for freeze: ")
+        
+        UserInput = input("Enter an expression: ")
+        Freeze = input('do you want to freeze any numbers? yes or no: ').lower()
         print()
-        if UserInput == 'f':
-            freeze_number = int(input('enter number to freeze: '))
-            while freeze_number not in Targets:
-                freeze_number = int(input('enter number to freeze: '))
-                freeze(freeze_number)
+        if Freeze == 'yes':
+            frozen_number = int(input('enter number to freeze: '))
+            while frozen_number not in Targets:
+                frozen_number = int(input('enter number to freeze: '))
+        else:
+            frozen_number = -1
+            
         if CheckIfUserInputValid(UserInput):
             UserInputInRPN = ConvertToRPN(UserInput)
             if CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
@@ -56,11 +65,17 @@ def PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber):
         if Targets[0] != -1:
             GameOver = True
         else:
-            Targets = UpdateTargets(Targets, TrainingGame, MaxTarget)        
+            Targets = UpdateTargets(Targets, TrainingGame, MaxTarget, frozen_number)        
     print("Game over!")
     DisplayScore(Score)
 
-def freeze(freeze_number):
+def freeze(frozen_number):
+    frozen_items =  dict()
+    for index, item in enumerate(Targets):
+        if item == frozen_number:
+            frozen_items[item].append(index)
+            print(f'frozen list: {frozen_items}')
+                
     pass
 
 def CheckIfUserInputEvaluationIsATarget(Targets, UserInputInRPN, Score):
@@ -82,14 +97,52 @@ def RemoveNumbersUsed(UserInput, MaxNumber, NumbersAllowed):
                 NumbersAllowed.remove(int(Item))
     return NumbersAllowed
 
-def UpdateTargets(Targets, TrainingGame, MaxTarget):
+def UpdateTargets(Targets, TrainingGame, MaxTarget, frozen_number):
+    print(f'frozen number: {frozen_number}')
+    if frozen_number != -1:
+        frozen_number_indexes = list()
+        for index, Target in enumerate(Targets):
+            # print(f'index: {index}, target: {Target}')
+            if Target == frozen_number:
+                frozen_number_indexes.append(index)
+                print(f'froze number in dict: {frozen_number_indexes}')
+                Targets.pop(index)
+                
+                
+        print(f'🐸 frozen_number_dict: {frozen_number_indexes}')
+        print(f'🐸 Filtered Targets: {Targets}')
+    else: 
+        pass
+    
+
     for Count in range (0, len(Targets) - 1):
         Targets[Count] = Targets[Count + 1]
     Targets.pop()
+    
+    
     if TrainingGame:
         Targets.append(Targets[-1])
     else:
         Targets.append(GetTarget(MaxTarget))
+    
+    if frozen_number != -1:
+        for index in frozen_number_indexes:
+            print()
+            Targets[index:index] = [frozen_number] # must put in place a list!
+            print(f'reinserting frozen numbers: {Targets}')
+        
+    print(f'final Targets: {Targets}')
+    '''
+    >>> a = [1, 2, 4]
+    >>> insert_at = 2  # Index at which you want to insert item
+    
+    >>> b = a[:]   # Created copy of list "a" as "b".
+                   # Skip this step if you are ok with modifying the original list
+    
+    >>> b[insert_at:insert_at] = [3]  # Insert "3" within "b"
+    >>> b
+    [1, 2, 3, 4]
+    '''
     return Targets
 
 def CheckNumbersUsedAreAllInNumbersAllowed(NumbersAllowed, UserInputInRPN, MaxNumber):
